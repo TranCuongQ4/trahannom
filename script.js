@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             infoBar.textContent = `✅ Đã kết nối server (${data.data_size})`;
             infoBar.style.color = '#4caf50';
         }
-        charList.innerHTML = `<span class="empty-placeholder">🔍 Nhập 1 từ khung trên để tra</span>`;
+        charList.innerHTML = `<span class="empty-placeholder">🔍 Chỉ Tra Từ Không Giảng Nghĩa</span>`;
     } catch (error) {
         console.error('Lỗi kết nối Worker:', error);
         charList.innerHTML = `<span class="empty-placeholder">❌ Lỗi kết nối server</span>`;
@@ -272,7 +272,7 @@ document.addEventListener('DOMContentLoaded', async function() {
     async function handleSearch() {
         const word = searchInput.value.trim();
         if (!word) {
-            charList.innerHTML = `<span class="empty-placeholder">🔍 Nhập 1 từ khung trên để tra</span>`;
+            charList.innerHTML = `<span class="empty-placeholder">🔍 Chỉ Tra Từ Không Giảng Nghĩa</span>`;
             infoBar.textContent = '';
             return;
         }
